@@ -6,6 +6,14 @@
 <p>
     created {{quote.date|dateSince}} days ago on {{quote.date|date}}
 </p>
+<button (click) = 'upVote()'>
+    UpVote   
+</button>
+{{ up }}
+
+<button (click) = 'downVote()'>
+    DownVote    {{ down }}
+</button>
 <button (click)='quoteDelete(true)'>
     Delete
 </button>

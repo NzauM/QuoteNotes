@@ -13,12 +13,7 @@ export class DateSincePipe implements PipeTransform {
    var dateDifferenceSecs = dateDifference*0.001;
    var dayCounter = dateDifferenceSecs/dailySeconds;
 
-   if(dayCounter <= 1 && value < timelessToday){
-     return dayCounter;
-   }
-   else{
-     return 0;
-   }
+   return dayCounter;
     
   }
 
