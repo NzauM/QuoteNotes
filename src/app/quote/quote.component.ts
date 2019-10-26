@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import{ Quote } from '../quote';
 import { from } from 'rxjs';
+import { $ } from 'protractor';
 
 @Component({
   selector: 'app-quote',
@@ -28,9 +29,15 @@ export class QuoteComponent implements OnInit {
     this.quotes[index].showDetails=!this.quotes[index].showDetails;
   }
 
-  completeQuote(isComplete,index){
+  deleteQuote(isComplete,index){
     if(isComplete){
-      this.quotes.splice(index,1)
+      let toDelete = confirm ('Are you sure you want to delete this quote by ${this.quotes[index].author}?' )
+
+
+      if (toDelete){
+        this.quotes.splice(index,1)
+      }
+      
     }
   }
 
