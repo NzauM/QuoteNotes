@@ -10,9 +10,9 @@ import { $ } from 'protractor';
 })
 export class QuoteComponent implements OnInit {
   quotes:Quote[]=[
-    new Quote(1,'Always live life','McDonald ','Jean',new Date(2019,6,16)),
-    new Quote(2,'Always live life','McDonald','John',new Date(2019,2,9)),
-    new Quote(3,'Happy Coding','Mercy','Nzau',new Date(2020,4,3))
+    new Quote(1,'life','Always live life','McDonald ','Jean',new Date(2019,6,16)),
+    new Quote(2,'love','If you love something ,let it free.','Alex','John',new Date(2019,2,9)),
+    new Quote(3,'tech','Happy Coding','Mercy','Nzau',new Date(2020,4,3))
   ];
 
   addNewQuote(quote){

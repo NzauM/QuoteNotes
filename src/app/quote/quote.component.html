@@ -1,16 +1,19 @@
-<p>quote works!</p>
+<!-- <p>quote works!</p> -->
+<div class="header">
+  <h1 class="jumbotron" >QUOTENOTES</h1>
+</div>
 <div *ngFor='let quote of quotes;let i=index' (click)='toggleDetails(i)'>
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
-        <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <ul>
-                  <li class="card-text">
-                        {{quote.name}} 
-                  </li> 
-                </ul>
+                <div class="col-md-4">
+        <div class="card" >
+                <div class="card-body" >
+                  <h1 class="card-title"> {{quote.title}} </h1>
+                  <div class="card-text">
+                        
+                        <h3><q> {{quote.name}}</q> </h3>
+                  </div> 
+                  <h5 class="card-footer">By: {{quote.author}}   </h5>
                 </div>
               </div>
     <app-quote-detail *ngIf='quote.showDetails'[quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>
