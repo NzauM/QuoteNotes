@@ -1,4 +1,5 @@
 <!-- <p>quote-detail works!</p> -->
+<div class="card">
 <div class="card-text">
 <p>
     Author:{{quote.author}}<br>
@@ -8,6 +9,8 @@
     created {{quote.date|dateSince}} days ago on {{quote.date|date}}
 </p>
 </div>
+</div>
+<!-- </div> -->
 <button (click) = 'upVote()'>
     UpVote   
 </button>
