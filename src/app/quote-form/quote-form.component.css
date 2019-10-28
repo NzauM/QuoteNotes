@@ -4,7 +4,16 @@ form{
     margin-left: 20%;
     margin-right: 20%;
     background-color: white;
+    padding: 50px;
 }
+
+/* .container-fluid{
+    background-image: url("https://media.gettyimages.com/vectors/celebration-vector-id1088916714?s=2048x2048");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+} */
+
 
 
 

@@ -13,10 +13,12 @@ card{
 }
 
 .header{
-    background-image: url("https://images.pexels.com/photos/415359/pexels-photo-415359.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-image: url("https://i.pinimg.com/originals/bb/b9/73/bbb97395aaf25aaaa09d9d095cc8f7e9.jpg");
     height: 80vh;
-    background-position: center;
-    background-size: cover;
+    /* background-position: center;
+    background-size: cover; */
+    /* background-repeat: no-repeat; */
+    
 }
 
 .jumbotron{
@@ -26,4 +28,15 @@ card{
     font-size: 500%;
     padding-bottom: 10%;
     padding-top: 10px;
+}
+
+/* section{
+    background-image: url("https://media.gettyimages.com/vectors/celebration-vector-id1088674690?s=2048x2048");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+} */
+
+#first{
+    top: 0%;
 }
