@@ -1,36 +1,53 @@
 <!-- <p>quote works!</p> -->
 <div class="header">
-  <h1 class="jumbotron" >QUOTENOTES</h1>
+  <h1 class="jumbotron">QUOTENOTES</h1>
+  <div id="kando">
+    Welcome to quote notes.Feel free to view quotes,add some of your own or contact us.
+
+  </div>
 </div>
 <!-- <img id="first" src="https://images.pexels.com/photos/291629/pexels-photo-291629.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt=""> -->
 <section>
-<div >
+  <div>
     <div class="container">
-      <h1 class="text-center">VIEW QUOTES</h1>
-        <div class="row">
-                <div class="col-md-4" *ngFor='let quote of quotes;let i=index'>
+      
+      <h1 class="text-center">VIEW QUOTES App</h1>
+      <!-- <p>Best quote is</p> -->
+      <!-- <div *ngIf="highlightedQuote().up !==0" > -->
+       <div appHighlight>
+          <p>Best quote is : {{highlightedQuote().name}} </p>
+       </div>
 
-        <div class="card" >
-                <div class="card-body" >
-                  <h1 class="card-title"> {{quote.title}} </h1>
-                  <div class="card-text">
-                        
-                        <h3><q> {{quote.name}}</q> </h3>
-                  </div> 
-                  <button (click)='toggleDetails(i)'>
-                      VIEW DETAILS
-                  </button>
-                  <h5 class="card-footer">By: {{quote.author}}   </h5>
-                </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4" *ngFor="let quote of quotes; let i = index">
+          <div class="card">
+            <div class="card-body">
+              <h1 class="card-title">{{ quote.title }}</h1>
+              <div class="card-text">
+                <h3>
+                  <q> {{ quote.name }}</q>
+                </h3>
               </div>
-    <app-quote-detail *ngIf='quote.showDetails'[quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>
-</div>
-</div>
-</div>
-</div>
+              <button (click)="toggleDetails(i)">
+                VIEW DETAILS
+              </button>
+              <h5 class="card-footer">By: {{ quote.author }}</h5>
+            </div>
+          </div>
+          <!-- <p >{{ quote[1].name }}</p> -->
+          <app-quote-detail
+            *ngIf="quote.showDetails"
+            [quote]="quote"
+            (isComplete)="deleteQuote($event, i)"
+          ></app-quote-detail>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 <div>
-    <!-- <button (click) = 'upVote()'>
+  <!-- <button (click) = 'upVote()'>
         UpVote   
     </button>
     {{ up }}
@@ -38,7 +55,5 @@
     <button (click) = 'downVote()'>
         DownVote    {{ down }}
     </button> -->
-    <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+  <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
 </div>
-
-   

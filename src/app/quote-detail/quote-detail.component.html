@@ -12,14 +12,14 @@
 </div>
 <!-- </div> -->
 <button (click) = 'upVote()'>
-    UpVote   
+    UpVote   {{ up }}
 </button>
-{{ up }}
+
 
 <button (click) = 'downVote()'>
-    DownVote    
+    DownVote   {{ down }} 
 </button>
-{{ down }}
+
 <button (click)='quoteDelete(true)'>
     Delete
 </button>

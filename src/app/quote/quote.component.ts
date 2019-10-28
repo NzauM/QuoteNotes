@@ -10,9 +10,9 @@ import { $ } from 'protractor';
 })
 export class QuoteComponent implements OnInit {
   quotes:Quote[]=[
-    new Quote(1,'life','Always live life','McDonald ','Jean',new Date(2019,6,16)),
-    new Quote(2,'love','If you love something ,let it free.','Alex','John',new Date(2019,2,9)),
-    new Quote(3,'tech','Happy Coding','Mercy','Nzau',new Date(2020,4,3))
+    new Quote(1,'life','Always live life','McDonald ','Jean',new Date(2019,6,16),0,0),
+    new Quote(2,'love','If you love something ,let it free.','Alex','John',new Date(2019,2,9),0,0),
+    new Quote(3,'tech','Happy Coding','Mercy','Nzau',new Date(2020,4,3),0,0)
   ];
 
   addNewQuote(quote){
@@ -23,6 +23,16 @@ export class QuoteComponent implements OnInit {
     // quote.submittor = "";
     quote.Date = new Date(quote.Date);
     this.quotes.push(quote)
+  }
+
+  highlightedQuote(){
+    let upArray:number[] = [];
+    for(let i of this.quotes){
+      upArray.push(i.up);
+    }
+    let mostVoted = Math.max(...upArray);
+    let mostVotedQuote = this.quotes.find(quotes => quotes.up === mostVoted);
+    return mostVotedQuote;
   }
   
   toggleDetails(index){
