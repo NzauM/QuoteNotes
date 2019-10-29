@@ -2,8 +2,10 @@
 <div class="header">
   <h1 class="jumbotron">QUOTENOTES</h1>
   <div id="kando">
-    Welcome to quote notes.Feel free to view quotes,add some of your own or contact us.
-
+    Welcome to quote notes.Feel free to view quotes,vote and add some quotes of your own
+    <a href="#quoteCreator">
+      <button id="baton">ADD A QUOTE</button>
+      </a>
   </div>
 </div>
 <!-- <img id="first" src="https://images.pexels.com/photos/291629/pexels-photo-291629.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt=""> -->
@@ -11,25 +13,25 @@
   <div>
     <div class="container">
       
-      <h1 class="text-center">VIEW QUOTES App</h1>
+      <h1 class="text-center">VIEW QUOTES </h1>
       <!-- <p>Best quote is</p> -->
       <!-- <div *ngIf="highlightedQuote().up !==0" > -->
        <div appHighlight>
           <p>Best quote is : {{highlightedQuote().name}} </p>
        </div>
 
-      </div>
+      <!-- </div> -->
       <div class="row">
         <div class="col-md-4" *ngFor="let quote of quotes; let i = index">
           <div class="card">
             <div class="card-body">
-              <h1 class="card-title">{{ quote.title }}</h1>
+              <h1 class="card-title , change-font" >{{ quote.title }}</h1>
               <div class="card-text">
                 <h3>
                   <q> {{ quote.name }}</q>
                 </h3>
               </div>
-              <button (click)="toggleDetails(i)">
+              <button class="change-font" (click)="toggleDetails(i)">
                 VIEW DETAILS
               </button>
               <h5 class="card-footer">By: {{ quote.author }}</h5>

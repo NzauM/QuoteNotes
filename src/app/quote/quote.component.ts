@@ -12,7 +12,9 @@ export class QuoteComponent implements OnInit {
   quotes:Quote[]=[
     new Quote(1,'life','Always live life','McDonald ','Jean',new Date(2019,6,16),0,0),
     new Quote(2,'love','If you love something ,let it free.','Alex','John',new Date(2019,2,9),0,0),
-    new Quote(3,'tech','Happy Coding','Mercy','Nzau',new Date(2020,4,3),0,0)
+    new Quote(3,'tech','Happy Coding','Mercy','Nzau',new Date(2018,4,3),0,0),
+    new Quote(4,"Investments","An investment in knowledge pays the best","Benjamin","Waeni",new Date(2019,8,7),0,0),
+    new Quote(5,"Preparation","The best preparion for tommorow is doing your best today","Ada","Lovelace",new Date(2019,5,2),5,1)
   ];
 
   addNewQuote(quote){

@@ -6,14 +6,28 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Description
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+quote notes is an application that lets you view and add quotes. you can also vote on your favorite quote.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Behaviour  Driven Development
+User Requirements
+-As a user I would like to:
 
+-Create a new quote.
+-Upvote or downvote a quote.
+-Delete a quote
+-See the number of upvotes and number of downvotes for each quote.
+
+## Technologies Used
+
+This applcation uses;
+
+- HTML - for markup .
+- CSS - for custom styling.
+- AngularJs - for document object manipulation scripts
+- Bootstrap - for general styling and ensuring responsiveness.
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
