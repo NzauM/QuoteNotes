@@ -28,6 +28,12 @@ This applcation uses;
 - CSS - for custom styling.
 - AngularJs - for document object manipulation scripts
 - Bootstrap - for general styling and ensuring responsiveness.
+
+## Support and contact details
+
+For any issues or contributions,please feel free to contact me on:<br>
+https://github.com/NzauM/quote-notes./issues for any issues or bug reports.<br>
+https://github.com/NzauM/quote-notes./pulls for any contributions or pull requests.
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
@@ -36,6 +42,8 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+### License
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+MIT License
+\_ **Nzau Mercy @2019**
